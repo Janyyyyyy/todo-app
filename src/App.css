@@ -1,0 +1,202 @@
+/* Global Styles */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #C9E4CA; /* Soft mint green background */
+}
+
+/* App Container */
+
+.App {
+  max-width: 500px; /* Increased width */
+  margin: 40px auto;
+  padding: 30px; /* Increased padding */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff; /* White background */
+}
+
+/* Todo List */
+
+.Todo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ffffff;
+  background-color: #f9f9f9;
+  transition: box-shadow 0.2s;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Added subtle shadow */
+}
+
+.Todo:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.Todo:last-child {
+  border-bottom: none;
+}
+
+.Todo.editing .edit-icon,
+.Todo.editing .delete-icon {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* Typography */
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #2ecc71; /* Bright green text */
+}
+
+/* Todo Form */
+
+.TodoForm {
+  margin-bottom: 20px;
+}
+
+.todo-input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ffffff; /* Coral border */
+  border-radius: 10px; /* Added rounded corners */
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.todo-btn {
+  background-color: #1abc9c; /* Teal button */
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Icons */
+
+.fa-trash {
+  margin-left: 10px;
+  color: #aba3a2; /* Coral icon */
+  /* Added icon animations */
+  transition: transform 0.2s;
+}
+
+.fa-trash:hover {
+  transform: rotate(30deg);
+}
+
+/* Icons */
+
+.edit-icon,
+.delete-icon {
+  cursor: pointer;
+  margin-left: 10px;
+  color: #908c8c; /* Coral icon */
+  /* Added icon animations */
+  transition: transform 0.2s;
+}
+
+.edit-icon:hover,
+.delete-icon:hover {
+  color: #1abc9c; /* Teal icon on hover */
+  transform: rotate(30deg);
+}
+.edit-icon {
+  margin-left: 10px;
+  color: #908c8c; /* Coral icon */
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.edit-icon:hover {
+  color: #1abc9c; /* Teal icon on hover */
+  transform: rotate(30deg);
+}
+
+.delete-icon {
+  margin-left: 10px;
+  color: #aba3a2; /* Coral icon */
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.delete-icon:hover {
+  transform: rotate(30deg);
+  color: #e74c3c; /* Red icon on hover */
+}
+
+.complete-icon {
+  margin-left: 10px;
+  color: #aba3a2; /* Blue icon */
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.complete-icon:hover {
+  color: #2196f3; /* Dark blue icon on hover */
+}
+
+.completed .complete-icon {
+  color: #2196f3; /* Grey icon after checking */
+}
+/* Todo Status */
+
+.incompleted {
+  color: #2ecc71; /* Bright green text */
+}
+
+.completed {
+  color: #2196f3; /* Medium gray text */
+  text-decoration: line-through;
+}
+
+.small-button {
+  padding: 5px 10px;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+  margin: 0 5px;
+  border: none;
+}
+
+.small-button:hover {
+  background-color: #ddd;
+}
+
+.small-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.complete-button {
+  color: #2196f3;
+}
+
+.complete-button:hover {
+  background-color: #1a237e;
+  color: #2196f3;
+}
+
+.uncomplete-icon {
+  margin-left: 10px;
+  color: #666; /* Grey icon */
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.uncomplete-icon:hover {
+  color: #e74c3c; /* Red icon on hover */
+}
